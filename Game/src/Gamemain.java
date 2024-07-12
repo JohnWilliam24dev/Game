@@ -6,11 +6,7 @@ import java.util.Scanner;
 
 public class Gamemain{
     public String os=System.getProperty("os.name").toLowerCase();
-    int dado(int limite){
-        Random generator= new Random();
-        int result= generator.nextInt(limite)-1;
-        return result;
-    }
+    
     
     public void main_menu(){
         
@@ -41,18 +37,19 @@ public class Gamemain{
         }
         
     }
-    private void characters(){
-        Personagem William_hall= new Personagem();
-        William_hall.addHability("Espelho da corrupção", ()->{
-            int damage=dado(8)+dado(8)+dado(8)+ William_hall.magic;
-        });
-        
-    }
-    public void selection(){
-        Clear.clear();
-        characters();
-        
-        
-    }
     
+        
+    
+    public void selection(){
+        Charater charater=new Charater();
+        charater.dado(3);
+        Clear.clear();
+        System.out.println(dado(8)+" e "+dado(8));
+        System.exit(0);
+        
+    }
+        
+        
 }
+    
+
