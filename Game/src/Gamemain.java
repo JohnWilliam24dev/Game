@@ -44,7 +44,7 @@ public class Gamemain{
         Charater charater=new Charater();
         charater.dado(3);
         Clear.clear();
-        System.out.println(dado(8)+" e "+dado(8));
+        
         System.exit(0);
         
     }
