@@ -47,7 +47,7 @@ public class Gamemain{
         Personagem Zumbi=new Personagem();
         Personagem William_hall=charater.William_hall(Zumbi);
         William_hall.useHability("Chamas da Corrupção");
-        System.out.println("A vida do Zumbi é"+Zumbi.life);
+        
         System.exit(0);
         
     }

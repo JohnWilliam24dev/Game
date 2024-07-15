@@ -8,6 +8,7 @@ public class Charater {
     }
     public Personagem William_hall(Personagem oponente){
         Personagem William_hall= new Personagem();
+        William_hall.nome="William Hall";
         William_hall.magic=+5;
         William_hall.magic_armor=+2;
         
@@ -23,8 +24,24 @@ public class Charater {
         });
         return William_hall;
     }
-    public void Loki(){
-
+    public Personagem Loki(Personagem oponente){
+        Personagem Loki= new Personagem();
+        Loki.nome="Loki";
+        Loki.physical=+5;
+        Loki.lethal=1;
+        Loki.magic_armor=+2;
+        
+        Loki.addHability("Ataque Trapaceiro", ()->{
+            int damage=dado(8)+dado(8)+dado(8)+Loki.physical;
+            System.out.println("Loki causou: "+damage+" de dano");
+            Loki.attack_physical(damage, Loki.lethal, oponente);
+        });
+        Loki.addHability("Adagas da Perdição", ()->{
+            int damage=dado(8)+dado(8)+dado(8)+dado(8)+Loki.physical*2;
+            System.out.println("Loki causou: "+damage+" de dano");
+            Loki.attack_physical(damage,Loki.lethal,oponente);
+        });
+        return Loki;
     }
     
 }
