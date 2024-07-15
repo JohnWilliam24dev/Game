@@ -29,7 +29,9 @@ public class Personagem {
     }
     void attack_magic(int damage,Personagem oponente){
         int enemy_magic_armor=oponente.magic_armor;
-        int enemy_life=oponente.life;
+        
+        int realdamage=damage-enemy_magic_armor;
+        oponente.life=oponente.life-realdamage;
         
 
     }
